@@ -7,6 +7,7 @@ namespace day3MD
         static void Main(string[] args)
         {
             zvaigznites2();
+            whileuzd();
         }
 
 
@@ -32,6 +33,27 @@ namespace day3MD
                 Console.WriteLine();
             }
 
+        }
+
+        static void whileuzd()
+            {
+            Console.WriteLine("Ievadiet skaitli!");
+            String input = Console.ReadLine();
+            Convert.ToInt32(input);
+            
+
+
+                    if (input == "break")
+                        {
+                            break;
+                        } 
+                    else
+                        {
+                        whileuzd();
+                        }
+                
+
+                
         }
     }
 }
