@@ -41,6 +41,8 @@ namespace day3MD
             String input = Console.ReadLine();
             Convert.ToInt32(input);
             
+            while (input != "break")
+                {
 
 
                     if (input == "break")
@@ -49,11 +51,11 @@ namespace day3MD
                         } 
                     else
                         {
-                        whileuzd();
+                            whileuzd();
                         }
-                
+                        //while uzdevuma pamats varētu būt šāds 
 
-                
+                }
         }
     }
 }
