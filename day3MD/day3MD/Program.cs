@@ -7,7 +7,7 @@ namespace day3MD
         static void Main(string[] args)
         {
             zvaigznites2();
-            whileuzd();
+            whiletask();
         }
 
 
@@ -24,9 +24,9 @@ namespace day3MD
             }
 
 
-            for (int i = 4; i >= 1; i--)
+            for (int i = 3; i >= 1; i--)
             {
-                for (int k = 1; k < i; k++)
+                for (int k = 1; k <= i; k++)
                 {
                     Console.Write("*");
                 }
@@ -56,6 +56,39 @@ namespace day3MD
                         //while uzdevuma pamats varētu būt šāds 
 
                 }
+        }
+
+
+        static void whiletask()
+        {
+            String choice = " ";
+            int biggest = Int32.MinValue;
+            int smallest = Int32.MaxValue;
+            while (choice != "n")
+            {
+                Console.WriteLine("ievadiet skaitli");
+                int sk = Convert.ToInt32(Console.ReadLine());
+                if(sk > biggest)
+                {
+                    biggest = sk;
+                } 
+                if(sk < smallest)
+                {
+                    smallest = sk;
+
+                }
+                Console.WriteLine("vai vēlaties turpināt? ne?");
+                choice = Console.ReadLine();
+                choice = choice.ToLower();
+                Console.WriteLine(choice);            
+            }
+            Console.WriteLine("lielakais" + biggest);
+            Console.WriteLine("mazakais" + smallest);
+        }
+
+        static void whileOption2()
+        {
+
         }
     }
 }
