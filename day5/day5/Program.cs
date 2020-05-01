@@ -31,6 +31,18 @@ namespace day5
             
         }
 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         static void arrayuzd()
         {
 
@@ -41,14 +53,11 @@ namespace day5
             {
                 Console.WriteLine("ievadiet skaitli");
                 b[i] = Convert.ToInt32(Console.ReadLine());
+                sum += b[i];
 
 
-                
             }
-            for(x = 0; x < 5; x++)
-            {
-                sum += b[x];
-            }
+
             Console.WriteLine(sum);
         }
     }
