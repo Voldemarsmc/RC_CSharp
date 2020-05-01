@@ -6,8 +6,9 @@ namespace day5
     {
         static void Main(string[] args)
         {
-           // ArraySample();
-            arrayuzd();
+            // ArraySample();
+            //arrayuzd();
+            task2();
         }
 
         static void ArraySample()
@@ -47,18 +48,40 @@ namespace day5
         {
 
             
-            int x, sum = 0;
+            int sum = 0;
             int[] b = new int[5];
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < b.Length; i++)
             {
                 Console.WriteLine("ievadiet skaitli");
                 b[i] = Convert.ToInt32(Console.ReadLine());
                 sum += b[i];
 
-
+                
             }
 
             Console.WriteLine(sum);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        static void task2()
+        {
+            double sum = 0;
+            double[] c = { 1, 2, 3, 4, 6, 7 };
+            for(int i = 0; i < c.Length; i++)
+            {
+                sum += c[i];
+            }
+            Console.WriteLine(sum / c.Length);
         }
     }
 }
