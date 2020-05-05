@@ -30,6 +30,7 @@ namespace day5_MD
                 if (sk == a[i])
                 {
                     Console.Write(i + " ");
+                    break;
                 }
                 else if (sk != a[i])
                 {
