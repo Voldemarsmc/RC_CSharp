@@ -8,7 +8,8 @@ namespace day5
         {
             // ArraySample();
             //arrayuzd();
-            task2();
+            //task2();
+            task3();
         }
 
         static void ArraySample()
@@ -83,5 +84,34 @@ namespace day5
             }
             Console.WriteLine(sum / c.Length);
         }
+
+
+
+
+
+        static void task3()
+        {
+
+            int[] a = new int[10];
+            Random randNum = new Random();
+            for(int i = 0; i < a.Length; i++)
+            {
+                a[i] = randNum.Next(1, 11);
+                Console.Write(a[i] + " ");
+            }
+            Console.WriteLine("ievadiet skaitli");
+            int sk = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                if(sk == a[i])
+                {
+                    Console.Write(i + " ");
+                }
+
+            }
+        }
+
+
     }
 }
