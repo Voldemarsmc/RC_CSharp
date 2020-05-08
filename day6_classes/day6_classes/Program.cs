@@ -9,8 +9,8 @@ namespace day6_classes
 
 
 
-            Class2.setA
-
+            Class2.setA,,kkk
+                
 
 
 
@@ -18,7 +18,7 @@ namespace day6_classes
 
             //Console.WriteLine(Class1.b);
             // Class1.Test();
-            //int a = Class1.ReturnPublic();
+            //int a = Class1.ReturnPublic();p
             // Console.WriteLine(a);
             //Class1.ParammPublic(5, 99);
 
