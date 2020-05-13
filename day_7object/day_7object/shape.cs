@@ -25,9 +25,11 @@ namespace day_7object
         {
             Console.WriteLine(mala1 + " " + mala2 + " " + mala3 + " " + mala4 + " " + mala5);
         }
-        public void perimeter()
+        public double perimeter()
         {
             Console.WriteLine(mala1 + mala2 + mala3 + mala4 + mala5);
+            return 0;
         }
+        
     }
 }
