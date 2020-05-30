@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace day13_MD
+namespace day14_
 {
     public partial class Form1 : Form
     {
@@ -17,14 +17,10 @@ namespace day13_MD
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void buttest_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var text = 
+            lsttest.Items.Add(Convert.ToString(1));
+            lsttest.Items.Add(Convert.ToString(2));
         }
     }
 }

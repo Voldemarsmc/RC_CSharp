@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace day13_MD
+namespace classwork
 {
     public partial class Form1 : Form
     {
@@ -17,14 +17,16 @@ namespace day13_MD
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            var text = 
+            bool valid = true;
+
+            if (textBox1.Text.Length < 1)
+            {
+                valid = false;
+            }
+
+            label1.Text = valid;
         }
     }
 }
