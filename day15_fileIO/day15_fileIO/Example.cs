@@ -12,7 +12,7 @@ namespace day15_fileIO
             String line;
             try
             {
-                StreamReader sr = new StreamReader("C:\\Users\\voldemars\\Desktop\\kodi.txt");
+                StreamReader sr = new StreamReader("C:\\Users\\voldemars\\Desktop\\test\\blabla");
 
                 line = sr.ReadLine();
 
@@ -32,9 +32,11 @@ namespace day15_fileIO
         {
             try
             {
-                StreamWriter sw = new StreamWriter("C:\\Users\\voldemars\\Desktop\\bbb.txt");
+                TextWriter sw = new StreamWriter("C:\\Users\\voldemars\\Desktop\\test\\blabla", true);
 
-                sw.WriteLine("hello");
+
+                sw.WriteLine(Console.ReadLine());
+                sw.Close();
             }
             catch
             {
