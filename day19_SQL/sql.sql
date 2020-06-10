@@ -42,7 +42,7 @@ modify column studentId int primary key AUTO_INCREMENT;
  (3, 1, "andris", "liepins"),
  (4, 1, "janis", "ozolins"),
  (5, 2, "davis", "lapins"),
- (6, 2, "arturs", "zarins"),
+ (6, 2, "janis", "zarins"),
  (7, 2, "artis", "ozols"),
  (8, 3, "jurgis", "petersislis"),
  (9, 3, "lauris", "alksnitis"),
@@ -50,5 +50,13 @@ modify column studentId int primary key AUTO_INCREMENT;
  (11, 3, "liene", "ziediņa"),
  (12, 3, "markus", "rozits");
 
+
 select * from studenti
-where studentCourse = 2;
+where studentCourse = 1 or studentCourse = 2 or studentCourse = 3;
+
+select * from studenti
+where studentName = "janis";
+
+select * from studenti
+where studentCourse = 1 or studentCourse = 2 ;
+
