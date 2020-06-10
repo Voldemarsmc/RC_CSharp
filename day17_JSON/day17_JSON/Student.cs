@@ -13,9 +13,9 @@ namespace day17_JSON
             setCourse(course);
         }
 
-        private String name;
-        private String surname;
-        private int course;
+        public String name;
+        public String surname;
+        public int course;
 
         public void setName(String name)
         {

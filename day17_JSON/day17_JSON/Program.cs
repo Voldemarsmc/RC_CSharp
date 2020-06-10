@@ -18,7 +18,7 @@ namespace day17_JSON
            // String json = JsonConvert.SerializeObject(cars, Formatting.Indented);     
             //Console.WriteLine(json);
 
-            //List<Car> cars2 = JsonConvert.DeserializeObject<List<Car>>(json);
+            //List<Car> cars2 = JsonConvert.DeserializeObject<List<Car>>(json);i
             //Console.WriteLine(cars2[0].brand + " " + cars2[0].model);
 
 
@@ -45,7 +45,7 @@ namespace day17_JSON
         {
             try
             {
-                StreamWriter sw = new StreamWriter("C:\\Users\\voldemars\\Desktop\\test2\\test.json");
+                StreamWriter sw = new StreamWriter("test.json");
                 sw.Write(json);
                 sw.Close();
             }
