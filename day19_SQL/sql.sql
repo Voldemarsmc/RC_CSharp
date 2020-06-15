@@ -18,11 +18,36 @@ values(1, "juris", "berzins"),
 
 
 insert into employees(employeeName, employeeLastName)
-values("karlis", "marks");
+values("aleksandrs", "vejs");
 
 select employeeName, employeeLastName
 from employees
 where employeeId = 1;
+
+
+SELECT * FROM employees;
+
+delete from employees WHERE employeeId = 4;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 create table studenti
