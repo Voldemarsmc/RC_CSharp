@@ -66,6 +66,8 @@ namespace day21_SQL
             }
         }
 
+
+        //---------------------------------------------------------------------------------------------------------------------------------------------
         public void InsertEmployees()
         {
             MySqlConnection connection = null;
@@ -75,10 +77,10 @@ namespace day21_SQL
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = connection;
-                cmd.CommandText = "INSERT INTO employees(employeeName, employeeLastname) VALUES(@Name, Juris Grigols)";
+                cmd.CommandText = "INSERT INTO employees(employeeName, employeeLastname) VALUES(@employeeName, @employeeLastname)";
                 cmd.Prepare();
 
-                cmd.Parameters.AddWithValue("@Name", "Juris Grigols");
+                cmd.Parameters.AddWithValue();
                 cmd.ExecuteNonQuery();
             }
             catch
