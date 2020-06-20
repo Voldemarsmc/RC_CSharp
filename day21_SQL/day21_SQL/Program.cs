@@ -9,7 +9,7 @@ namespace day21_SQL
             DBConnection con = new DBConnection();
             con.Connect();
             con.GetStudents();
-            //con.AddStudents();
+            con.AddStudents();
             con.DelStudent();
         }
     }
