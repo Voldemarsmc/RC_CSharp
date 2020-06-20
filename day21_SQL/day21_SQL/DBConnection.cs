@@ -104,7 +104,7 @@ namespace day21_SQL
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = connection;
                 cmd.CommandText = "delete from studenti where studentId='" + "1" + "';";
-                cmd.ExecuteNonQuery(); //???
+                cmd.ExecuteNonQuery(); 
             }
             finally
             {
