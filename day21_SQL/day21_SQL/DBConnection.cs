@@ -21,7 +21,7 @@ namespace day21_SQL
         public DBConnection()
         {
             server = "127.0.0.1";
-            database = "ofiss";
+            database = "studenti";
             user = "root";
             password = "voldemArs123";
             port = "3306";
@@ -48,28 +48,28 @@ namespace day21_SQL
                 Console.WriteLine(ex.ToString());
             }
         }
-
-        public void GetEmployees()
+        
+       
+        public void GetStudents()
         {
-            string stm = "SELECT employeeName, employeeLastName FROM employees";
+            string stm = "SELECT studentCourse, studentName, studentLastName From studenti";
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
 
             dataAdapter.SelectCommand = new MySqlCommand(stm, connection);
-
             DataTable table = new DataTable();
             dataAdapter.Fill(table);
 
 
             foreach (DataRow row in table.Rows)
             {
-                Console.WriteLine(row.Field<String>(0) + " " + row.Field<String>(1));
+                Console.WriteLine(row.Field<int>(0) + " " + row.Field<String>(1) + " " + row.Field<String>(2));
             }
         }
 
-
-        //---------------------------------------------------------------------------------------------------------------------------------------------
-        public void InsertEmployees()
+        public void AddStudents()
         {
+            
+
             MySqlConnection connection = null;
             try
             {
@@ -77,17 +77,42 @@ namespace day21_SQL
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = connection;
-                cmd.CommandText = "INSERT INTO employees(employeeName, employeeLastname) VALUES(@employeeName, @employeeLastname)";
+                cmd.CommandText = "INSERT INTO studenti(studentCourse, studentName, studentLastName) VALUES(@studentCourse, @studentName, @studentLastName)";
                 cmd.Prepare();
 
-                cmd.Parameters.AddWithValue();
+                
+                cmd.Parameters.AddWithValue("@studentCourse", 1);
+                cmd.Parameters.AddWithValue("@studentName", "arturs");
+                cmd.Parameters.AddWithValue("@studentLastName", "zvaigznite");
                 cmd.ExecuteNonQuery();
             }
-            catch
+            finally
             {
                 if (connection != null)
                     connection.Close();
             }
         }
+
+        public void DelStudent()
+        {
+            
+            MySqlConnection connection = null;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = "delete from studenti where studentId='" + "1" + "';";
+                cmd.ExecuteNonQuery(); //???
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+       
     }
 }
