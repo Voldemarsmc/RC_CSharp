@@ -6,11 +6,14 @@ namespace day21_SQL
     {
         static void Main(string[] args)
         {
+
+
+
             DBConnection con = new DBConnection();
             con.Connect();
             //con.AddTasks();
-            con.GetTaskList();
-            con.DelTask();
+            //con.GetTaskList();
+            //con.DelTask();
         }
     }
 }
